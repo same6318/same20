@@ -1,0 +1,13 @@
+$("#favorite-<%= @favorite.blog.id %>").html("<%= j(render 'favorites/favorite', { blog: @favorite.blog }) %>");
+
+<%# $("#comments_area")は生成されるHTMLの「<div id="comments_area">」を取得%>
+<%# html()はjQueryで使えるメソッドで、()の値でレシーバを書き換え%>
+<%# render 'comments/index'でapp/views/comments/_index.html.erbを取得%>
+<%# 結果的にapp/views/comments/_index.html.erbから取得したHTMLで$("#comments_area")のHTMLを書き換える処理が行われ、コメント入力欄を空欄に戻す%>
+
+<%#= <div id="this_comment_<%= comment.id ">
+<a class="favorite-link post-50" rel="nofollow" data-method="post" href="/favorites?blog_id=50">blog_id: params[:blog_id]
+    <i class="material-icons">star_border</i>
+</a> これをレンダリングするのかな？
+ %>
+
